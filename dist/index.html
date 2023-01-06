@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>To Do Page</title>
+    
+</head>
+<body>
+    <div id="content">
+        <div class="header">
+            <p>To-Do List</p>
+        </div>
+        <div class="body">
+            <div class="nav-menu">
+                <ul>
+                    <li id ='inbox'>
+                        <img src="../src/icons/tasks.png">
+                        Inbox                        
+                    </li>
+                    <li id ='projects'>
+                        <img src="/src/icons/folder.png">
+                        <!-- /home/andy/repos/ToDo-List/src/icons/folder.png -->
+                        <p id="project-tab">Projects</p>
+                        <div id="project-container">
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="right-container">
+                <div id = 'current-task-list'>
+                    <p>Inbox</p>
+                </div>
+                <div id="order-select">
+                    <div>
+                        <p class = 'date-order'>Date</p>
+                        <img id = 'date-order-sort-icon' src="../src/icons/sort-arrows.png">
+                    </div>
+                    <div>
+                        <p class = 'priority-order'>Priority</p>
+                        <img id = 'priority-order-sort-icon' src="../src/icons/sort-arrows.png">
+                    </div>
+
+                </div>
+                <div id="task-list"></div>
+            </div>
+            <div id='project-button'>
+                <img src="../src/icons/add-folder.png">
+            </div>
+            <div id='task-button'>
+                <p>+</p>
+            </div>
+        </div>
+        <div class="footer"></div>
+        <div class="wrapper">
+            <form class='task-form' id="task-form">
+                <p>Create a task</p>
+
+                <label for="task-name-input">Task Name</label>
+                <input type="text" name="task-name-input" id="task-name-input">
+            
+            
+                <label for="task-description-input">Task Description</label>
+                <textarea name="task-description-input" id="task-description-input"></textarea>
+            
+                <label for="task-date-input">Date</label>
+                <input type="date" name="task-date-input" id="task-date-input">
+            
+                <label for="task-priority-input">Priority</label>
+                <select name="task-priority-input" id="task-priority-input">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                
+                <label for="add-to-project">Add to Project</label>
+                <select name="add-to-project" id="add-to-project">
+                    
+                </select>
+
+                <button id='submit-button' type="button">Add Task</button>
+            </form>
+            <form class='project-form' id="project-form">
+                <p>Create a project</p>
+                
+                <label for="project-name-input">Project Name</label>
+                <input type="text" name="project-name-input" id="project-name-input">
+            
+            
+                <label for="project-details-input">Project Details</label>
+                <textarea name="project-details-input" id="project-details-input"></textarea>
+            
+                <button id='project-submit-button' type="button">Add Project</button>
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
